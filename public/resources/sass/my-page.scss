@@ -1,0 +1,62 @@
+@import "common.scss";
+
+// ================================== header ==========================
+@import "header.scss";
+
+// ================================== main ==========================
+
+.top-contents {
+    width: 20vw;
+    padding: 10vh 0;
+    text-align: center;
+    margin: 0 auto;
+    h2 {
+        border-bottom: 1px solid;
+    }
+    td{
+        border-bottom: 1px solid;
+        width: 20vw;
+    }
+}
+
+.main-content-each{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    img {
+      width: 40vw;
+      height: 30vh;
+      object-fit: cover; 
+    }
+    &-description {
+        height: 100%;
+        align-items: flex-end;
+    h1 {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+  }
+  a {
+    color: black;
+  }
+}
+.main-content-each-description{
+    margin: 0 2vw;
+    a {
+        color: $yellow;
+    }
+}
+
+#edit-button {
+    width: 4vw;
+    background-color: $green;
+    border: none;
+}
+#delete-button {
+    width: 4vw;
+    background-color: $green;
+    border: none;
+}
+#description  {
+    color: black;
+}

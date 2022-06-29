@@ -1,0 +1,29 @@
+@import "common.scss";
+
+// ================================== header ==========================
+@import "header.scss";
+
+// ================================== main ==========================
+
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    input {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    textarea {
+        width: 70vw;
+        margin: 0 auto;
+    }
+}
+#submit {
+    width: 10vw;
+    height: 5vh;
+    background-color: $green;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+}

@@ -1,0 +1,46 @@
+@import "common.scss";
+
+// ================================== header ==========================
+@import "header.scss";
+
+// ================================== main ==========================
+.create-form-wrap {
+    margin: 30px 0;
+    text-align: center;
+    h1 {
+        padding: 10px;
+        // color: $yellow;
+    }
+    form {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 50vw;
+        margin: 0 auto;
+    }
+    input {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    textarea {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    select {
+        width: 70vw;
+        margin: 0 auto;
+    }
+}
+#submit {
+    width: 10vw;
+    height: 5vh;
+    background-color: $green;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+}
+
+

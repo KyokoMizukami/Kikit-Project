@@ -1,0 +1,98 @@
+@charset "UTF-8";
+.featurs-content {
+  margin-top: 10vh;
+}
+
+.features-wrap {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 5%;
+}
+.features-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.features-wrap h1 {
+  font-size: 1.5rem;
+}
+
+.select-box {
+  cursor: pointer;
+  position: relative;
+  max-width: 20em;
+  margin: 5em auto;
+}
+
+.select,
+.label {
+  color: #414141;
+  display: block;
+  font: 400 17px/2em "Source Sans Pro", sans-serif;
+}
+
+.select {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 5px 0;
+  height: 40px;
+  opacity: 0;
+  background: none transparent;
+  border: 0 none;
+}
+
+.select-box1 {
+  background: #ececec;
+  width: 18vw;
+}
+
+.select-box2 {
+  background: #ececec;
+}
+
+.label {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.open .label::after {
+  content: "▲";
+}
+
+.label::after {
+  content: "▼";
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px 15px;
+  border-left: 5px solid #fff;
+}
+
+.select-form-wrap {
+  margin-top: 10vh;
+}
+
+.main-content-each {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+.main-content-each img {
+  width: 40vw;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-content-each-description {
+  height: 100%;
+  align-items: flex-end;
+}
+.main-content-each-description h1 {
+  font-size: 1.3rem;
+  padding: 10px;
+}

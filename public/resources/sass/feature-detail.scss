@@ -1,0 +1,15 @@
+@import "common.scss";
+// // ================================== header ==========================
+
+@import "header.scss";
+// // ================================== features ==========================
+@import "style.scss";
+
+.top-content {
+    background-color: $green;
+    color: $yellow;
+    img {
+        width: 100%;
+    }
+    margin-bottom: 100px;
+}
