@@ -86,6 +86,7 @@
         <label for="address">住所</label>
         <input type="text" name="address" value="{{$kikit_article_edit['address']}}"/>
         @if(Auth::id() == 1)
+        <label for="feature">特集</label>
         <select name="feature" class="select-area">
             <option value="0">特集対象外</option>
         @foreach($kikit_feature as $kikit_features)
