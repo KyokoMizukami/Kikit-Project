@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+
+// Route::group(['middleware' => 'auth'],function(){
 
     // Route::get('/', function () {
     //     return view('index');
@@ -70,8 +74,9 @@ Auth::routes();
 
     // --------------------------------------------- Delete Feature -------------------------------------------
     Route::get('/feature_delete/{feature_id}',[App\Http\Controllers\FeatureEditController::class, 'featureDelete'])->name('feature_delete');
+// });
 
-   
+    Route::get('/guest', [App\Http\Controllers\Auth\LoginController::class,'guestLogin'])->name('login.guest');
 
     
 

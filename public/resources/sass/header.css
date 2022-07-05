@@ -32,6 +32,10 @@ header .header-nav img {
   width: 100px;
 }
 
+header .header-nav .header-nav-list {
+  margin-right: auto;
+}
+
 header .header-nav .header-nav-list ul {
   width: 100vw;
   list-style: none;

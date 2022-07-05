@@ -11,26 +11,25 @@
     <link rel="stylesheet" href="{{ asset('resources/sass/my-page.css') }}">
 </head>
 <body>
-   <!------------------------------- header -------------------------->
-   <header>
+  <!------------------------------- header -------------------------->
+  <header>
         <div class="header-nav">
             <div class="header-nav-list">
                 <ul>
-                @if(Auth::check())
-                <li><a href="/home"><img src="img/logo.png" alt="画像がないよ"></a></li>
-                <li><span class="my-navbar-item">{{ Auth::user()->name }}さんようこそ！</span></li>
-                <li><a href="{{route('my_page')}}">マイページ</a></li>
-                <li><a href="{{route('create-form')}}">投稿</a></li>
-                <li>お気に入り</li>
-                @if(Auth::id() == 1)
-                <li><a href="{{route('add_feature')}}">特集追加</a></li>
-                <li><a href="{{route('features_list')}}">特集一覧</a></li>
-                @endif
-                <a href="{{route('logout')}}" class="my-navbar-item">ログアウト</a>
-
-                @else
-                    <a class="my-navbar-item" href="{{route('login')}}">ログイン</a>
-                    <a class="my-navbar-item" href="{{route('register') }}">会員登録</a>
+                @if(Auth::id()== 3)
+                    <li><a href="/home"><img src="img/logo.png" alt="画像がないよ"></a></li>
+                    <a class="my-navbar-item" href="{{route('logout')}}">ログイン</a>
+                    <a class="my-navbar-item" href="{{route('logout')}}">会員登録</a>
+                @elseif(Auth::check())
+                    <li><a href="/home"><img src="img/logo.png" alt="画像がないよ"></a></li>
+                    <li><span class="my-navbar-item">{{ Auth::user()->name }}さんようこそ！</span></li>
+                    <li><a href="{{route('my_page')}}">マイページ</a></li>
+                    <li><a href="{{route('create-form')}}">投稿</a></li>
+                    @if(Auth::id() == 1)
+                        <li><a href="{{route('add_feature')}}">特集追加</a></li>
+                        <li><a href="{{route('features_list')}}">特集一覧</a></li>
+                    @endif
+                        <a href="{{route('logout')}}" class="my-navbar-item" style="padding-left:20px;">ログアウト</a>
                 @endif
 
                 </ul>

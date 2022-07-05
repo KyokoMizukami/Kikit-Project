@@ -27,7 +27,7 @@ class FeatureEditController extends Controller
         ]);
     }
 
-    public function featureEditProcess(int $id, FeatureCreateData $request) {
+    public function featureEditProcess(int $id, Request $request) {
         $features = new Feature;
         $feature_update = $features->where('feature_id',$id)->first();
         

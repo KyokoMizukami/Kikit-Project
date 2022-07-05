@@ -14,6 +14,7 @@ class DisplayController extends Controller
     public function displayAll() {
         $kikit_article = new Kikit_article;
         $kikit_article_all = $kikit_article->all()->toArray();
+      
 
         $features = new Feature;
         $features_all = $features->all()->toArray();
@@ -29,10 +30,14 @@ class DisplayController extends Controller
         $select_area = $request->select_area;
         $select_category = $request->select_category;
 
+        $features = new Feature;
+        $features_all = $features->all()->toArray();
+
         $kikit_article_select = $kikit_article->where('area',$select_area)->where('category',$select_category)->get()->toArray();
 
         return view('index',[
             'kikit_articles' => $kikit_article_select,
+            'features' => $features_all,
         ]);
     }
 
